@@ -1,3 +1,4 @@
+#include <common.h>
 #include <asm86.h>
 #include <hashTable.h>
 #include <lexer.h>
@@ -22,11 +23,13 @@ loop:;
 	*find = strX86OpcodeAppendItem(*find, op);
 }
 int ASMX86IsOpcode(const char *text) {
-	char buffer[strlen(text) + 1];
+	//char buffer[strlen(text) + 1];
+	char *buffer = malloc(strlen(text) + 1);
 	strcpy(buffer, text);
 	for (long i = 0; i != strlen(text); i++)
 		if (text[i] >= 'a' || text[i] <= 'z')
 			buffer[i] = text[i] - 'a' + 'A';
+	free( buffer);
 	return NULL != mapX86OpcodesGet(X86Opcodes, text);
 }
 void ASMX86Init() {

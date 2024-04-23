@@ -1,3 +1,4 @@
+#include <common.h>
 #include <assert.h>
 #include "cleanup.h"
 #include "debugPrint.h"

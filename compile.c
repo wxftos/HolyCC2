@@ -1,3 +1,4 @@
+#include <common.h>
 #include "IR2asm.h"
 #include "asmEmitter.h"
 #include "cleanup.h"

@@ -150,7 +150,7 @@ void graphReplaceWithNode(strGraphNodeP toReplace, struct __graphNode *replaceWi
 strGraphNodeP __graphNodeVisitAllAccessable(const struct __graphNode *start);
 
 GRAPH_TYPE_DEF(struct __graphNode *, struct __graphEdge *, Mapping);
-GRAPH_TYPE_FUNCS(struct __graphNode *, struct __graphEdge *, Mapping);
+//GRAPH_TYPE_FUNCS(struct __graphNode *, struct __graphEdge *, Mapping);
 graphNodeMapping createFilteredGraph(struct __graphNode *start, strGraphNodeP nodes, void *data, int (*pred)(struct __graphNode *, void *data));
 MAP_TYPE_DEF(char *, GraphVizAttr);
 MAP_TYPE_FUNCS(char *, GraphVizAttr);

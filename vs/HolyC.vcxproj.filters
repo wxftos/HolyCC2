@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\x87fpu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\abi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\abiSysVx64.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\asmEmitter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\basicBlocks.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cacheDir.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\commandLine.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\compile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debugPrint.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\diagMsg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dumpDebugInfo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\escaper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exprParser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filePath.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frameLayout.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graph.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphColoring.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hashTable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ieee754.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IR.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IR2asm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IRFilter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IRLiveness.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IRTypeInference.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lexer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\linkedList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opcodesParser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parse2IR.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parserA.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parserB.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\preproccessIR.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\preprocessor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ptrMap.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regAllocator.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registers.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rope.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sourceHash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\str.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stringParser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textMapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utf8Encode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\X86AsmSharedVars.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unistd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,3 +1,4 @@
+#include <common.h>
 #include "IR2asm.h"
 #include "IRLiveness.h"
 #include "abi.h"
@@ -111,13 +112,13 @@ void findRegisterLiveness(graphNodeIR start) {
 				continue;
 		if (value->val.type != IR_VAL_REG)
 			continue;
-		__auto_type reg = value->val.value.reg.reg;
-		for(long r=0;r!=8;r++) if(fpu[r]==reg) goto next;
+		struct reg *_reg = value->val.value.reg.reg;
+		for(long r=0;r!=8;r++) if(fpu[r]== _reg) goto next;
 
 		__auto_type var=IRCreateVirtVar(&typeU0);
-		var->name=strcpy(calloc(strlen(reg->name)+1,1), reg->name);
+		var->name=strcpy(calloc(strlen(_reg->name)+1,1), _reg->name);
 		__auto_type newNode = IRCreateVarRef(var);
-		ptrMapVar2RegAdd(var2Reg, var, reg);
+		ptrMapVar2RegAdd(var2Reg, var, _reg);
 		
 		
 		struct IRATTRoldRegSlice newAttr;
@@ -214,10 +215,14 @@ static strGraphNodeIRP getFuncArgs(graphNodeIR call) {
 	strGraphEdgeIRP in CLEANUP(strGraphEdgeIRPDestroy) = IREdgesByPrec(call);
 	strGraphNodeIRP args = NULL;
 	for (long i = 0; i != strGraphEdgeIRPSize(in); i++) {
-		switch (*graphEdgeIRValuePtr(in[i])) {
-		default:
-			break;
-		case IR_CONN_FUNC_ARG_1 ... IR_CONN_FUNC_ARG_128:
+		//switch (*graphEdgeIRValuePtr(in[i])) {
+		//default:
+		//	break;
+		//case IR_CONN_FUNC_ARG_1 ... IR_CONN_FUNC_ARG_128:
+		//	args = strGraphNodeIRPAppendItem(args, graphEdgeIRIncoming(in[i]));
+		//}
+		auto v = *graphEdgeIRValuePtr(in[i]);
+		if (v >= IR_CONN_FUNC_ARG_1 && v<= IR_CONN_FUNC_ARG_128) {
 			args = strGraphNodeIRPAppendItem(args, graphEdgeIRIncoming(in[i]));
 		}
 	}

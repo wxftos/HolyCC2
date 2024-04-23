@@ -40,3 +40,6 @@ nbproject/private/tools/localhost/MinGW/gcc.exe
 nbproject/project.xml
 fastBuild/*
 b/
+x64
+debug
+.vs

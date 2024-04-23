@@ -1,3 +1,4 @@
+#include "common.h"
 #include <limits.h>
 #include "IR.h"
 #include "diagMsg.h"
@@ -371,8 +372,9 @@ static strChar unescapeString(const char *str) {
 			if (strchr(otherValids, str[i])) {
 				retVal = strCharAppendItem(retVal, str[i]);
 			} else {
-				long count = snprintf(NULL, 0, "\\%02x", ((uint8_t *)str)[i]);
-				char buffer[count + 1];
+				//long count = snprintf(NULL, 0, "\\%02x", ((uint8_t *)str)[i]);
+				//char buffer[count + 1];
+				char buffer[8];
 				sprintf(buffer, "\\%02x", ((uint8_t *)str)[i]);
 				retVal = strCharAppendData(retVal, buffer, strlen(buffer));
 			}

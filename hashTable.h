@@ -17,7 +17,7 @@ struct __map;
 	};                                                                                                                                                               \
 	inline void map##suffix##Remove(map##suffix map, const char *key, void (*kill)(void *)) __attribute__((always_inline));                                          \
 	inline void map##suffix##Remove(map##suffix map, const char *key, void (*kill)(void *)) {                                                                        \
-		return __mapRemove(map, key, kill);                                                                                                                            \
+		 __mapRemove(map, key, kill);                                                                                                                            \
 	}                                                                                                                                                                \
 	inline void map##suffix##Destroy(map##suffix map, void (*kill)(void *)) __attribute__((always_inline));                                                          \
 	inline void map##suffix##Destroy(map##suffix map, void (*kill)(void *)) {                                                                                        \
