@@ -119,6 +119,13 @@ static int funcTypeRefsChangedType(struct object *type) {
 						return 0;
 		}
 }
+size_t getline(char **lineptr, size_t *n, FILE *fp){
+	char*p = fgets(*lineptr, *n, fp);
+	size_t len = strlen(p);
+	printf("getline: %s\n", *lineptr);
+	return len;
+}
+
 /*
 	* Types file has format 
  * name1:typestr
